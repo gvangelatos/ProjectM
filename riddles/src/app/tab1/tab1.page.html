@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button fill="clear" slot="end" (click)="refreshList()">
+        <ion-icon
+          slot="icon-only"
+          name="refresh-circle-outline"
+          aria-hidden="true"
+        ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title> Choose Your Gift </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Choose Your Gift</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content [fullscreen]="true">
+    <app-gift-game-card [riddleList]="riddleList"></app-gift-game-card>
+  </ion-content>
+</ion-content>

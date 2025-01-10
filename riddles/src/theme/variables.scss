@@ -1,0 +1,12 @@
+// For information on how to create your own theme, please see:
+// http://ionicframework.com/docs/theming/
+
+@import url("https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap");
+
+$text-input-ios-show-focus-highlight: false;
+$text-input-md-show-focus-highlight: false;
+$text-input-wp-show-focus-highlight: false;
+
+:root {
+  --ion-color-primary: #e30022;
+}

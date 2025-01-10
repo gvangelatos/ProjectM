@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab1"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{activeRiddle.title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">{{activeRiddle.title}}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{activeRiddle.title}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <span class="md-text">{{activeRiddle.riddleText}}</span>
+      <ion-input
+        [ngClass]="{wiggle: enabledWiggle}"
+        label="Answer"
+        label-placement="floating"
+        fill="solid"
+        placeholder="Answer"
+        [(ngModel)]="answerInput"
+      >
+        <ion-button
+          fill="clear"
+          slot="end"
+          aria-label="Try"
+          (click)="checkAnswer()"
+        >
+          <ion-icon
+            slot="icon-only"
+            name="arrow-forward-outline"
+            aria-hidden="true"
+          ></ion-icon>
+        </ion-button>
+      </ion-input>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

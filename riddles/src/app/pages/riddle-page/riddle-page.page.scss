@@ -1,0 +1,36 @@
+ion-card {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ion-card-title {
+  font-size: 36px;
+}
+
+.md-text {
+  font-size: 22px;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.wiggle {
+  display: inline-block;
+  animation: wiggle 0.5s infinite;
+}
