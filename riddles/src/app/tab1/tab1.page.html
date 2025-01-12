@@ -4,19 +4,23 @@
       <ion-button fill="clear" slot="end" (click)="refreshList()">
         <ion-icon
           slot="icon-only"
+          color="primary"
           name="refresh-circle-outline"
           aria-hidden="true"
         ></ion-icon>
       </ion-button>
     </ion-buttons>
     <ion-title class="ion-no-margin ion-no-padding"> Earn Your Gift </ion-title>
-    <ion-button fill="clear" size="small" slot="start" (click)="showInfo()">
-      <ion-icon
-        slot="icon-only"
-        name="alert-circle-outline"
-        aria-hidden="true"
-      ></ion-icon>
-    </ion-button>
+    <ion-buttons slot="start">
+      <ion-button fill="clear" size="small" slot="start" (click)="showInfo()">
+        <ion-icon
+          slot="icon-only"
+          color="primary"
+          name="alert-circle-outline"
+          aria-hidden="true"
+        ></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 

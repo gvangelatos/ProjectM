@@ -1,15 +1,20 @@
 <ion-tabs>
-  <ion-tab-bar slot="bottom">
+  <ion-tab-bar slot="bottom" class="ion-padding">
     <div class="text">
-      Solved <ion-text color="primary">{{solvedRiddlesNumber}}</ion-text>/4
+      Solved <ion-text color="primary">{{solvedRiddlesNumber}}</ion-text>/5
     </div>
     <div class="icons">
       <ion-icon
-        *ngFor="let item of [].constructor(4); let i = index"
+        *ngFor="let item of [].constructor(5); let i = index"
+        class="beating"
+        [ngClass]="{beating: i < solvedRiddlesNumber}"
         aria-hidden="true"
         color="primary"
+        size="large"
         [name]="i < solvedRiddlesNumber ? 'heart' : 'heart-outline'"
       ></ion-icon>
     </div>
   </ion-tab-bar>
+
+  <ion-text class="devotion-text" color="primary">Για το Μαράκι μου</ion-text>
 </ion-tabs>

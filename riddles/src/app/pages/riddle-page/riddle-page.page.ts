@@ -58,8 +58,9 @@ export class RiddlePagePage implements OnInit {
       } else {
         this.toastCtrl
           .create({
-            message: 'Opps! that is the wrong answer...',
-            duration: 1500,
+            message:
+              'Opps! that is the wrong answer... But you have infinite tries because you are cute!',
+            duration: 3500,
             position: 'bottom',
             icon: 'close-circle-outline',
             color: 'danger',
@@ -82,7 +83,7 @@ export class RiddlePagePage implements OnInit {
         message: message,
         buttons: [
           {
-            text: 'Great!',
+            text: 'Give me my gift!',
             role: 'confirm',
             handler: () => {
               this.riddlesService.solvedRiddles

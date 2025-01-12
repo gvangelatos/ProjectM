@@ -33,6 +33,10 @@ export class GiftGameCardComponent implements OnInit {
 
   ngOnInit() {}
 
+  trackBySolution(index: number, item: RiddleObjectType) {
+    return item.solution;
+  }
+
   openRiddle(pos: number) {
     localStorage.setItem('activeRiddle', pos + '');
     this.navCtrl.navigateForward('/tabs/solve');

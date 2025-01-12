@@ -2,3 +2,21 @@ ion-tab-bar {
   display: flex;
   flex-direction: column-reverse;
 }
+
+.devotion-text {
+  font-size: 12px;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  z-index: 999;
+}
+
+.text {
+  font-size: 17px;
+}
+
+.beating {
+  -webkit-animation: beat 1s ease-in-out infinite;
+  animation: beat 1s ease-in-out infinite;
+  -moz-animation: beat 1s ease-in-out infinite;
+}

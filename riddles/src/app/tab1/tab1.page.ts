@@ -47,6 +47,15 @@ export class Tab1Page {
       title: 'The Warmth Within',
       solution: ['heat'],
     },
+    {
+      solved: false,
+      riddleText:
+        "I'm red but not a rose, I beat but have no drum, I'm where your love grows, And where your feelings come.  What am I?",
+      locked: true,
+      hint: 'string',
+      title: "Love's Keeper",
+      solution: ['heart'],
+    },
   ];
 
   private alertCtrl = inject(AlertController);
@@ -77,6 +86,15 @@ export class Tab1Page {
       {
         solved: false,
         riddleText:
+          "I make you sweat on a sunny day, \nAnd keep you warm when skies are gray. \nI'm found in fire, and the sun above, \nWhat am I, if not warmth and love?",
+        locked: true,
+        hint: 'string',
+        title: 'The Warmth Within',
+        solution: ['heat'],
+      },
+      {
+        solved: false,
+        riddleText:
           "I travel far without a sound, \nIn me, words of love or news are found. \nSealed with care, I make my way, \nTo brighten someone's night or day. What am I?",
         locked: true,
         hint: 'string',
@@ -86,11 +104,11 @@ export class Tab1Page {
       {
         solved: false,
         riddleText:
-          "I make you sweat on a sunny day, \nAnd keep you warm when skies are gray. \nI'm found in fire, and the sun above, \nWhat am I, if not warmth and love?",
+          "I'm red but not a rose, I beat but have no drum, I'm where your love grows, And where your feelings come. I quicken with glances, I soften with care, A home for your longing, Forever I'm there. What am I?",
         locked: true,
         hint: 'string',
-        title: 'The Warmth Within',
-        solution: ['heat'],
+        title: "Love's Keeper",
+        solution: ['heart'],
       },
     ];
     this.riddlesService.setSolvedRiddles(0);

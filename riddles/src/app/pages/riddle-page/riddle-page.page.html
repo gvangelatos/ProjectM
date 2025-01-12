@@ -23,12 +23,15 @@
       <span class="md-text">{{activeRiddle.riddleText}}</span>
       <ion-input
         [ngClass]="{wiggle: enabledWiggle}"
-        label="Answer"
+        label="Answer Here"
         label-placement="floating"
-        fill="solid"
+        fill="outline"
         placeholder="Answer"
+        class="ion-margin-top"
         [(ngModel)]="answerInput"
       >
+      </ion-input>
+      <div class="ion-text-end">
         <ion-button
           fill="clear"
           slot="end"
@@ -37,11 +40,12 @@
         >
           <ion-icon
             slot="icon-only"
+            size="large"
             name="arrow-forward-outline"
             aria-hidden="true"
           ></ion-icon>
         </ion-button>
-      </ion-input>
+      </div>
     </ion-card-content>
   </ion-card>
 </ion-content>
