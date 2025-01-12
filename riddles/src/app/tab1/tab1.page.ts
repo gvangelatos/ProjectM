@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RiddleObjectType } from '../components/gift-game-card/gift-game-card.component';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab1',
@@ -47,6 +48,8 @@ export class Tab1Page {
     },
   ];
 
+  private alertCtrl = inject(AlertController);
+
   constructor() {}
 
   refreshList() {
@@ -89,6 +92,23 @@ export class Tab1Page {
       },
     ];
     localStorage.setItem('riddleListData', JSON.stringify(this.riddleList));
+  }
+
+  showInfo() {
+    this.alertCtrl
+      .create({
+        header: 'How to Play?',
+        message:
+          'Solve each riddle and presend each solution to George to get your corresponding present. ',
+        buttons: [
+          {
+            text: 'Go It!',
+            role: 'confirm',
+            handler: () => {},
+          },
+        ],
+      })
+      .then((alertEl) => alertEl.present());
   }
 
   ionViewWillEnter() {
