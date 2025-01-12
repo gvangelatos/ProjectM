@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { RiddleObjectType } from '../components/gift-game-card/gift-game-card.component';
 import { AlertController } from '@ionic/angular';
+import { RiddleService } from '../services/riddles-service/riddle.service';
 
 @Component({
   selector: 'app-tab1',
@@ -50,6 +51,7 @@ export class Tab1Page {
 
   private alertCtrl = inject(AlertController);
 
+  private riddlesService = inject(RiddleService);
   constructor() {}
 
   refreshList() {
@@ -91,6 +93,7 @@ export class Tab1Page {
         solution: ['heat'],
       },
     ];
+    this.riddlesService.setSolvedRiddles(0);
     localStorage.setItem('riddleListData', JSON.stringify(this.riddleList));
   }
 

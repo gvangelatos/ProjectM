@@ -19,7 +19,9 @@ import {
   NavController,
   ToastController,
 } from '@ionic/angular';
+import { take } from 'rxjs';
 import { RiddleObjectType } from 'src/app/components/gift-game-card/gift-game-card.component';
+import { RiddleService } from 'src/app/services/riddles-service/riddle.service';
 
 @Component({
   selector: 'app-riddle-page',
@@ -42,6 +44,7 @@ export class RiddlePagePage implements OnInit {
   private navCtrl = inject(NavController);
   private alertCtrl = inject(AlertController);
   private toastCtrl = inject(ToastController);
+  private riddlesService = inject(RiddleService);
   constructor() {}
 
   ngOnInit() {}
@@ -82,6 +85,11 @@ export class RiddlePagePage implements OnInit {
             text: 'Great!',
             role: 'confirm',
             handler: () => {
+              this.riddlesService.solvedRiddles
+                .pipe(take(1))
+                .subscribe((solvedNumber) => {
+                  this.riddlesService.setSolvedRiddles(solvedNumber + 1);
+                });
               this.activeRiddle.solved = true;
               const acttiveRiddlePosition =
                 localStorage.getItem('activeRiddle');
