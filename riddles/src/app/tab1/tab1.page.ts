@@ -120,7 +120,7 @@ export class Tab1Page {
       .create({
         header: 'How to Play?',
         message:
-          'Solve each riddle and presend each solution to George to get your corresponding present. ',
+          'Solve each riddle and present each solution to George to get your corresponding present. ',
         buttons: [
           {
             text: 'Go It!',
