@@ -10,7 +10,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-    "gh-pages": "ionic build --prod -- --base-href https://gvangelatos.github.io/ProjectM/ && npx angular-cli-ghpages --dir=www"
+    "gh-pages-build": "ionic build --prod -- --base-href https://gvangelatos.github.io/ProjectM/",
+    "gh-pages-deploy": "npx angular-cli-ghpages --dir=www"
   },
   "private": true,
   "dependencies": {
