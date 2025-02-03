@@ -76,6 +76,22 @@ export class RiddlePagePage implements OnInit {
     }
   }
 
+  showHint() {
+    this.alertCtrl
+      .create({
+        header: 'Hint:',
+        message: this.activeRiddle.hint,
+        buttons: [
+          {
+            text: 'I get it now!',
+            role: 'confirm',
+            handler: () => {},
+          },
+        ],
+      })
+      .then((alertEl) => alertEl.present());
+  }
+
   showAlert(message: string, header: string) {
     this.alertCtrl
       .create({

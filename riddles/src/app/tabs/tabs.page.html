@@ -1,11 +1,11 @@
 <ion-tabs>
   <ion-tab-bar slot="bottom" class="ion-padding">
     <div class="text">
-      Solved <ion-text color="primary">{{solvedRiddlesNumber}}</ion-text>/5
+      Solved <ion-text color="primary">{{solvedRiddlesNumber}}</ion-text>/6
     </div>
     <div class="icons">
       <ion-icon
-        *ngFor="let item of [].constructor(5); let i = index"
+        *ngFor="let item of [].constructor(6); let i = index"
         class="beating"
         [ngClass]="{beating: i < solvedRiddlesNumber}"
         aria-hidden="true"
