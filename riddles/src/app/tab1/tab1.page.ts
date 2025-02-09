@@ -14,11 +14,38 @@ export class Tab1Page {
     {
       solved: false,
       riddleText:
-        "I'm seen in peace, yet signal “go,” \nI'm part of rainbows, as you may know. \nIn emerald jewels, I brightly gleam, \nA symbol of growth and nature's dream. \nWhat color am I?",
+        "I'm red but not a rose, I beat but have no drum, I'm where your love grows, And where your feelings come.  What am I?",
       locked: false,
+      hint: 'Mine beats for you!',
+      title: "Love's Keeper",
+      solution: ['heart'],
+    },
+    {
+      solved: false,
+      riddleText:
+        "I'm seen in peace, yet signal “go,” \nI'm part of rainbows, as you may know. \nIn emerald jewels, I brightly gleam, \nA symbol of growth and nature's dream. \nWhat color am I?",
+      locked: true,
       hint: 'The color of trees!',
       title: "Nature's Secret Shade",
       solution: ['green'],
+    },
+    {
+      solved: false,
+      riddleText:
+        "I make you sweat on a sunny day, \nAnd keep you warm when skies are gray. \nI'm found in fire, and the sun above, \nWhat am I, if not warmth and love?",
+      locked: true,
+      hint: 'Starts with the letter "H"',
+      title: 'The Warmth Within',
+      solution: ['heat'],
+    },
+    {
+      solved: false,
+      riddleText:
+        "I have a tail, but I'm not a mouse, I roam the halls inside your house. I love to nap in the sun's warm glow, And when I fall, I land just so. I purr when happy, hiss when mad, A playful friend when you are sad. What am I?",
+      locked: true,
+      hint: 'Casper is one!',
+      title: 'A Furry Mystery',
+      solution: ['cat', 'lion'],
     },
     {
       solved: false,
@@ -38,33 +65,6 @@ export class Tab1Page {
       title: 'Words on a Journey',
       solution: ['letter'],
     },
-    {
-      solved: false,
-      riddleText:
-        "I make you sweat on a sunny day, \nAnd keep you warm when skies are gray. \nI'm found in fire, and the sun above, \nWhat am I, if not warmth and love?",
-      locked: true,
-      hint: 'Starts with the letter "H"',
-      title: 'The Warmth Within',
-      solution: ['heat'],
-    },
-    {
-      solved: false,
-      riddleText:
-        "I'm red but not a rose, I beat but have no drum, I'm where your love grows, And where your feelings come.  What am I?",
-      locked: true,
-      hint: 'Mine beats for you!',
-      title: "Love's Keeper",
-      solution: ['heart'],
-    },
-    {
-      solved: false,
-      riddleText:
-        "I have a tail, but I'm not a mouse, I roam the halls inside your house. I love to nap in the sun's warm glow, And when I fall, I land just so. I purr when happy, hiss when mad, A playful friend when you are sad. What am I?",
-      locked: true,
-      hint: 'Casper is one!',
-      title: 'A Furry Mystery',
-      solution: ['cat'],
-    },
   ];
   riddleList: RiddleObjectType[] = this.startingList;
 
@@ -74,7 +74,7 @@ export class Tab1Page {
   constructor() {}
 
   refreshList() {
-    this.riddleList = this.startingList;
+    this.riddleList = [...this.startingList];
     this.riddlesService.setSolvedRiddles(0);
     localStorage.setItem('riddleListData', JSON.stringify(this.riddleList));
   }
