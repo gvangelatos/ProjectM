@@ -27,3 +27,16 @@ ion-tab-bar {
   animation: beat 1s ease-in-out infinite;
   -moz-animation: beat 1s ease-in-out infinite;
 }
+
+.container-heart {
+  position: relative;
+}
+
+.icon-letter {
+  position: absolute;
+  left: 11px;
+  top: 8px;
+  font-size: 14px;
+  z-index: 1;
+  font-weight: bold;
+}

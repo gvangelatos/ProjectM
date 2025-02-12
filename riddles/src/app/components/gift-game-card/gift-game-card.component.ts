@@ -28,6 +28,9 @@ export interface RiddleObjectType {
 })
 export class GiftGameCardComponent implements OnInit {
   @Input() riddleList: RiddleObjectType[] = [];
+  enabledWiggleRotate: boolean = false;
+  textShine: boolean = false;
+  wigglePosition: number = 1;
 
   private navCtrl = inject(NavController);
 
@@ -40,5 +43,19 @@ export class GiftGameCardComponent implements OnInit {
   openRiddle(pos: number) {
     localStorage.setItem('activeRiddle', pos + '');
     this.navCtrl.navigateForward('/tabs/solve');
+  }
+
+  lockedClick(locked: boolean, pos: number) {
+    if (locked) {
+      this.wigglePosition = pos;
+      this.enabledWiggleRotate = true;
+      setTimeout(() => {
+        this.enabledWiggleRotate = false;
+      }, 700);
+      this.textShine = true;
+      setTimeout(() => {
+        this.textShine = false;
+      }, 2000);
+    }
   }
 }

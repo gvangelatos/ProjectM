@@ -69,3 +69,80 @@ ion-button.solved-btn {
     filter: blur(0px);
   }
 }
+
+@keyframes wiggle {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes wiggle-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(-45deg);
+  }
+  75% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.wiggle-rotate {
+  display: inline-block;
+  animation: wiggle-rotate 0.7s linear infinite;
+}
+
+.wiggle {
+  display: inline-block;
+  animation: wiggle 1.5s linear infinite;
+}
+
+// experimental below
+
+@keyframes textShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.textShine {
+  background: linear-gradient(
+    to right,
+    #ffffff 0%,
+    #df8787 17%,
+    #cd5353 20%,
+    #fa0000 30%,
+    #cd0101 70%,
+    #da4a4a 80%,
+    #df8787 82%,
+    #ffffff 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  background-size: 500% auto;
+  animation: textShine 1s ease-in-out infinite alternate;
+}

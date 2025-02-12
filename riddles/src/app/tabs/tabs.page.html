@@ -4,15 +4,23 @@
       Solved <ion-text color="primary">{{solvedRiddlesNumber}}</ion-text>/6
     </div>
     <div class="icons">
-      <ion-icon
-        *ngFor="let item of [].constructor(6); let i = index"
-        class="beating"
-        [ngClass]="{beating: i < solvedRiddlesNumber}"
-        aria-hidden="true"
-        color="primary"
-        size="large"
-        [name]="i < solvedRiddlesNumber ? 'heart' : 'heart-outline'"
-      ></ion-icon>
+      <div
+        *ngFor="let item of ['Σ','Α','Γ','Α','Π','Ω',]; let i = index"
+        class="container-heart"
+      >
+        <span *ngIf="i < solvedRiddlesNumber" class="icon-letter">
+          {{item}}
+        </span>
+        <ion-icon
+          class="beating"
+          [ngClass]="{beating: i < solvedRiddlesNumber}"
+          aria-hidden="true"
+          color="primary"
+          size="large"
+          [name]="i < solvedRiddlesNumber ? 'heart' : 'heart-outline'"
+        >
+        </ion-icon>
+      </div>
     </div>
   </ion-tab-bar>
 
