@@ -34,7 +34,7 @@ export class Tab1Page {
       riddleText:
         "I make you sweat on a sunny day, \nAnd keep you warm when skies are gray. \nI'm found in fire, and the sun above, \nWhat am I, if not warmth and love?",
       locked: true,
-      hint: 'Starts with the letter "H"',
+      hint: 'Starts with the letter "H"!',
       title: 'The Warmth Within',
       solution: ['heat'],
     },

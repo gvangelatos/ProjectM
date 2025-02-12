@@ -8,7 +8,7 @@
         *ngFor="let item of ['Σ','Α','Γ','Α','Π','Ω',]; let i = index"
         class="container-heart"
       >
-        <span *ngIf="i < solvedRiddlesNumber" class="icon-letter">
+        <span *ngIf="solvedRiddlesNumber === 6" class="icon-letter">
           {{item}}
         </span>
         <ion-icon

@@ -5,7 +5,9 @@
 >
   <ion-card-header
     class="ion-no-margin header"
-    [ngClass]="{ wiggle: textShine && !item.solved && !item.locked }"
+    [ngClass]="{
+      'wiggle-rotate-soft': textShine && !item.solved && !item.locked
+    }"
   >
     <ion-card-title
       class="large-font blurry-text"

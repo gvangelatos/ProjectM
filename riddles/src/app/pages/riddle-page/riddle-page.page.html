@@ -36,6 +36,7 @@
           fill="clear"
           slot="end"
           aria-label="Try"
+          [disabled]="lockBtns"
           (click)="checkAnswer()"
         >
           <ion-icon

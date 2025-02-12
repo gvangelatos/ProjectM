@@ -116,6 +116,29 @@ ion-button.solved-btn {
   animation: wiggle 1.5s linear infinite;
 }
 
+@keyframes wiggle-rotate-soft {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.wiggle-rotate-soft {
+  display: inline-block;
+  animation: wiggle-rotate-soft 0.7s linear infinite;
+}
+
 // experimental below
 
 @keyframes textShine {

@@ -41,6 +41,7 @@ export class RiddlePagePage implements OnInit {
   };
   riddleList: RiddleObjectType[] = [];
   enabledWiggle: boolean = false;
+  lockBtns: boolean = false;
   private navCtrl = inject(NavController);
   private alertCtrl = inject(AlertController);
   private toastCtrl = inject(ToastController);
@@ -50,6 +51,7 @@ export class RiddlePagePage implements OnInit {
   ngOnInit() {}
 
   checkAnswer() {
+    this.lockBtns = true;
     if (this.answerInput?.toLowerCase()) {
       if (
         this.activeRiddle.solution.includes(this.answerInput?.toLowerCase())
@@ -74,6 +76,7 @@ export class RiddlePagePage implements OnInit {
         }, 500);
       }
     }
+    this.lockBtns = false;
   }
 
   showHint() {
@@ -97,6 +100,7 @@ export class RiddlePagePage implements OnInit {
       .create({
         header,
         message: message,
+        backdropDismiss: false,
         buttons: [
           {
             text: 'Give me my gift!',
